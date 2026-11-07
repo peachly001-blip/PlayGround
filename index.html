@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#073e4b" />
+    <title>Tidal Tailor — Merman Makeover</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="Tidal Tailor home"><span class="brand-mark">✦</span><span>TIDAL <b>TAILOR</b></span></a>
+        <div class="season-pill"><span class="live-dot"></span> THE CORAL BALL <span class="pill-divider">/</span> LOOK 01</div>
+        <button class="icon-btn sound-btn" aria-label="Toggle ambient sound" title="Sound on/off"><span>♫</span></button>
+      </header>
+      <section class="game-layout">
+        <section class="stage-wrap" aria-label="Merman dressing stage">
+          <div class="stage-topline"><div><span class="eyebrow">YOUR UNDERSEA MUSE</span><h1>Make a <em>little</em> magic.</h1></div><div class="stage-actions"><button class="round-btn" id="randomize" title="Surprise me" aria-label="Randomize look">⤨</button><button class="round-btn" id="spin" title="Auto rotate" aria-label="Auto rotate character">⟳</button></div></div>
+          <div id="stage" class="stage">
+            <div class="water-glow"></div><div class="water-lines"></div><div class="stage-label"><span class="stage-star">✦</span> THE LAGOON AT DUSK</div>
+            <div class="bubbles" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="reef reef-left"><span></span><span></span><span></span><span></span></div><div class="reef reef-right"><span></span><span></span><span></span><span></span></div>
+            <div class="pedestal"><div></div></div>
+            <div id="character-mount" aria-label="3D merman character"></div>
+            <div class="drag-hint"><span>↔</span> DRAG TO TURN</div>
+            <div class="stage-caption"><span class="caption-line"></span><span id="look-name">THE PEARL PRINCE</span><span class="caption-line"></span></div>
+            <div class="stage-counter"><span class="counter-dot active"></span><span class="counter-dot"></span><span class="counter-dot"></span></div>
+          </div>
+          <div class="bottom-note"><span>✧</span> Every tide deserves a little sparkle <span>✧</span></div>
+        </section>
+        <aside class="wardrobe">
+          <div class="wardrobe-heading"><div><span class="eyebrow">THE WARDROBE</span><h2>Style your merman</h2></div><button id="reset" class="reset-btn">RESET <span>↺</span></button></div>
+          <div class="challenge"><div class="challenge-icon">♢</div><div><span class="challenge-label">TONIGHT'S OCCASION</span><strong>Coral Moon Ball</strong><small>Dress to shimmer under the sea.</small></div><span class="challenge-sparkle">✦</span></div>
+          <div class="category-tabs" role="tablist" aria-label="Wardrobe categories">
+            <button class="tab active" data-category="tail" role="tab" aria-selected="true"><span>〰</span> TAIL</button>
+            <button class="tab" data-category="top" role="tab" aria-selected="false"><span>◇</span> TOP</button>
+            <button class="tab" data-category="hair" role="tab" aria-selected="false"><span>♧</span> HAIR</button>
+            <button class="tab" data-category="extras" role="tab" aria-selected="false"><span>✧</span> EXTRAS</button>
+          </div>
+          <div class="option-panel"><div class="options-header"><span id="category-title">CHOOSE A TAIL</span><span id="item-count">04 OPTIONS</span></div><div id="options" class="options-grid"></div></div>
+          <div class="style-score"><div class="score-top"><span>LOOK SCORE</span><strong><span id="score">72</span><small>/ 100</small></strong></div><div class="score-track"><i id="score-fill"></i></div><div class="score-caption"><span>✦</span><span id="score-message">A classic, ocean-born look</span></div></div>
+          <button id="complete-look" class="complete-btn"><span>COMPLETE THE LOOK</span><span class="button-arrow">→</span></button>
+          <div class="wardrobe-foot"><span>✦</span> MIX, MATCH & MAKE WAVES <span>✦</span></div>
+        </aside>
+      </section>
+      <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
